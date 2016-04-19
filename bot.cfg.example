@@ -1,0 +1,9 @@
+{
+
+"bot_api": "BOT_API_KEY",
+"hook_key": "RANDOM_KEY",
+"bot_admin": "Privileged_USER_for_BOT",
+"listen": "0.0.0.0:3000",
+"database": "./chat.db"
+
+}
