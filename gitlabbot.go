@@ -89,8 +89,13 @@ var (
 )
 
 func main() {
+	config := os.Args[1]
+	if config != "" {
+		BotConfig = Config{}.loadConfig(config) // Load config file
+	}else{
+		BotConfig = Config{}.loadConfig("./bot.cfg") // Load config file
+	}
 
-	BotConfig = Config{}.loadConfig("./bot.cfg") // Load config file
 	DB = initDB(BotConfig.DataBase)              // init data base
 	RoomList = getRepositoryList(DB)             // Get added repositories and room for push event message
 	// Hook chanel

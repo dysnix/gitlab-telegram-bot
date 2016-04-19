@@ -53,6 +53,19 @@ Default config path `./bot.cfg`, JSON format
 `ARGS` should be equivalent to the repository name.  
 3. Eat a cookie and enjoy spam in channel :D
 
+### Docker
+
+```sh
+docker pull sysalex/gitlab-telegram-bot
+
+docker run -t -i -p 3000:8081 -d \
+--env BOT_API_KEY="BOT_API_KEY" \
+--env BOT_HOOK_KEY="BOT_HOOK_KEY" \
+--env BOT_ADMIN="ADMIN_USER_NAME" sysalex/gitlab-telegram-bot
+```
+**hook url**
+`URL` = `http://IP:8081/hook/BOT_HOOK_KEY`
+
 ## Contributing
 :-*
 
